@@ -1,11 +1,9 @@
 <?php
 declare(strict_types=1);
 
-require_once 'model/Book.model.php';
-require_once 'controller/Book.controller.php';
-require_once 'view/Book.view.php';
+require_once 'code/Post.php';
+require_once 'code/PostLoader.php';
 
-$view = new BookView();
 ?>
 
 <!doctype html>
@@ -21,7 +19,7 @@ $view = new BookView();
 <section>
     <h1 style="text-align: center; font-size: 2rem">Guestbook</h1>
     <form style="text-align: center; display: flex; flex-direction: column;justify-content: center; align-items: center"
-          method="get" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>">
+          method="post" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>">
         <label>Title</label>
         <input type="text" name="title" placeholder="Title"/> <br>
         <label>Full name</label>
