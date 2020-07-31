@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
-class BookController extends BookModel {
+class BookController extends BookModel
+{
 
 }
